@@ -25,7 +25,8 @@ if( user.equals("admin") && clave.equals("1234")) {
 	
 }
 else {
-	
+	String url = "/Registro.html";
+	getServletContext().getRequestDispatcher(url).forward(request, response);
 }
 }
 }

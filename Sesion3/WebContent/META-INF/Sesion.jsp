@@ -8,5 +8,11 @@
 </head>
 <body>
 
+<h1>Esta es su sesión: </h1><br>
+
+<p>Nombre: ${nombre} </p>
+<p>Apellidos: ${apellidos}</p>
+<p>Email: ${email}</p>
+
 </body>
 </html>

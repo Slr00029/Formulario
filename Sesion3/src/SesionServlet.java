@@ -12,8 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 public class SesionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String nombre = request.getParameter("nombre");
+		String email = request.getParameter("email");
+		String apellidos = request.getParameter("apellidos");
 		
+		request.setAttribute("nombre", nombre);
+		request.setAttribute("apellidos", apellidos);
+		request.setAttribute("email", email);
+		String url = "/META-INF/Sesion.jsp";
+		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
+	
 }

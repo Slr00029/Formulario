@@ -22,7 +22,8 @@ String user = request.getParameter("user");
 String clave = request.getParameter("password");
 
 if( user.equals("admin") && clave.equals("1234")) {
-	
+	String url = "/WEB-INF/usuarios.jsp";
+	getServletContext().getRequestDispatcher(url).forward(request, response);
 }
 else {
 	String url = "/Registro.html";
